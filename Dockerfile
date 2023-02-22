@@ -4,7 +4,7 @@ ENV TZ=UTC
 ENV LANG=en_US.UTF-8
 ENV LC_ALL=en_US.UTF-8
 
-RUN  yum -y install python3-PyMySQL cairo pango  libffi libffi-devel python3-cairo libxml2-devel  python39-psycopg2.x86_64 \
+RUN  yum -y install python3-PyMySQL cairo pango  libffi libffi-devel python3-cairo libxml2-devel  python3-psycopg2.x86_64 \
     libpq.x86_64  openssl-devel.x86_64  xmlsec1-openssl.x86_64 libpq-devel.x86_64 gettext
 RUN yum clean all  
 ###################################### create run file  ###################################### 
