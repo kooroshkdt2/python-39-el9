@@ -5,8 +5,10 @@ ENV LANG=en_US.UTF-8
 ENV LC_ALL=en_US.UTF-8
 
 RUN  yum -y install python3-PyMySQL cairo pango  libffi libffi-devel python3-cairo libxml2-devel  python3-psycopg2.x86_64 \
-    libpq.x86_64  openssl-devel.x86_64  xmlsec1-openssl.x86_64 libpq-devel.x86_64 gettext  &&\ 
-    yum clean all    &&\ 
+     libpq.x86_64  openssl-devel.x86_64  xmlsec1-openssl.x86_64 libpq-devel.x86_64 gettext  &&\ 
+     yum -y https://repo.almalinux.org/almalinux/9/CRB/x86_64/os/Packages/xmlsec1-devel-1.2.29-9.el9.x86_64.rpm &&\ 
+     yum -y https://repo.almalinux.org/almalinux/9/CRB/x86_64/os/Packages/libtool-ltdl-devel-2.4.6-45.el9.x86_64.rpm &&\ 
+     yum clean all    &&\ 
 ###################################### create run file  ###################################### 
     echo  'echo "before collect"' >> /usr/libexec/s2i/assemble  &&\
     echo  'wget -O .env http://$DP_PROVIDER/$DEPLOYMENT_NAME' >> /usr/libexec/s2i/assemble  &&\ 
