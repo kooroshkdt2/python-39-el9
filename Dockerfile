@@ -29,6 +29,6 @@ RUN  yum -y install python3-PyMySQL cairo pango  libffi libffi-devel python3-cai
     chmod +x /opt/ -R    && \
     chown 1001:0 -R /opt/ -R  && \
     chmod 777 /opt/ -R  && \
-    pip3 install -U  pip setuptools cryptography
+    pip3 install -U  pip setuptools cryptography  && \
     pip3 install wheel
 USER 1001
